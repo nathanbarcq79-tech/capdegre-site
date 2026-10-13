@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /merci
+Disallow: /merci.html
+Sitemap: https://capdegre.netlify.app/sitemap.xml

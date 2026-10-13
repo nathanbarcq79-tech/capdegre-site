@@ -12,7 +12,7 @@
     try { window.localStorage.setItem(storageKey, value); } catch (e) {}
   }
   function startMatomo() {
-    if (started) return;
+    if (started) { window._paq.push(['setConsentGiven']); window._paq.push(['trackPageView']); return; }
     started = true;
     var _paq = window._paq = window._paq || [];
     _paq.push(['requireConsent']);

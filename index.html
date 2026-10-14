@@ -159,6 +159,24 @@
       .hero-card{padding:22px}
       form{padding:22px}
     }
+
+    /* CAP DEGRÉ° : illustrations légères et responsives */
+    .hero-card .hero-illustration{border-radius:17px;background:#f2f8f3;overflow:hidden;margin:-9px -9px 20px}
+    .hero-card .hero-illustration img{display:block;width:100%;height:auto;max-height:256px;object-fit:contain}
+    .visual-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+    .visual-panel{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 10px 26px rgba(24,49,59,.06)}
+    .visual-panel img{display:block;width:100%;aspect-ratio:1.42;object-fit:cover}
+    .visual-panel-inner{padding:16px 21px 24px}
+    .visual-panel h3{font-size:21px;line-height:1.25;margin:6px 0 10px}
+    .visual-panel p{font-size:14px;color:var(--muted);margin:0 0 13px}
+    .visual-panel a{font-weight:800;color:#365f4b;text-decoration:underline;text-underline-offset:3px}
+    .article .article-thumb{display:block;width:100%;aspect-ratio:1.6;object-fit:cover;border-radius:13px;margin-bottom:17px;border:1px solid #dce7de}
+    .sim-intro{display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:24px}
+    .sim-intro .section-head{margin-bottom:0}
+    .sim-intro img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid #d8e7dc}
+    @media(max-width:950px){.visual-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.visual-grid,.sim-intro{grid-template-columns:1fr}.sim-intro img{max-width:480px;margin:auto}.article .article-thumb{aspect-ratio:1.8}}
+
   </style>
 </head>
 <body>
@@ -195,6 +213,7 @@
           </div>
         </div>
         <aside class="hero-card" aria-label="Promesse CAP DEGRÉ">
+          <div class="hero-illustration"><img src="/assets/illustration-maison-energie.svg" width="960" height="680" alt="Maison, pompe à chaleur, panneaux solaires et comparaison énergétique illustrés" decoding="async" fetchpriority="high"></div>
           <div class="mini">Ce que CAP DEGRÉ° souhaite apporter</div>
           <h3>Moins d'hésitation. Plus de visibilité.</h3>
           <ul class="hero-list">
@@ -213,6 +232,21 @@
         <div class="band-card"><strong>Avant travaux</strong><p>Comparer les solutions avant de signer un devis ou de trancher.</p></div>
         <div class="band-card"><strong>Avant de changer de chauffage</strong><p>Vérifier si le système envisagé est cohérent techniquement et économiquement.</p></div>
         <div class="band-card"><strong>Avant de surinvestir</strong><p>Prendre du recul sur les économies annoncées et les arbitrages utiles.</p></div>
+      </div>
+    </section>
+
+    <section class="visuels" id="explorer">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Explorer les solutions</div>
+          <h2>Comprendre vos travaux, en images et en chiffres.</h2>
+          <p>Du chauffage à l'isolation jusqu'au solaire, découvrez les principaux arbitrages avant de vous engager.</p>
+        </div>
+        <div class="visual-grid">
+          <article class="visual-panel"><img src="/assets/illustration-comparaison-chauffage.svg" width="960" height="680" alt="Tableau de bord illustrant la comparaison entre PAC, gaz et granulés" loading="lazy" decoding="async"><div class="visual-panel-inner"><h3>Comparer votre chauffage</h3><p>Comprenez ce qui influence réellement l'investissement et la facture.</p><a href="/comparateur-chauffage.html">Essayer le comparateur gratuit →</a></div></article>
+          <article class="visual-panel"><img src="/assets/illustration-renovation.svg" width="960" height="680" alt="Maison ancienne et analyse des pertes de chaleur" loading="lazy" decoding="async"><div class="visual-panel-inner"><h3>Rénover dans le bon ordre</h3><p>Évaluez l'impact de l'isolation et des radiateurs avant de changer de système.</p><a href="/isoler-avant-chauffage.html">Lire nos conseils →</a></div></article>
+          <article class="visual-panel"><img src="/assets/illustration-solaire.svg" width="960" height="680" alt="Maison équipée de panneaux solaires et schéma d'autoconsommation" loading="lazy" decoding="async"><div class="visual-panel-inner"><h3>Comprendre le solaire</h3><p>Production, usages et autoconsommation : évitez les promesses trop simples.</p><a href="/photovoltaique-autoconsommation.html">Explorer le solaire →</a></div></article>
+        </div>
       </div>
     </section>
 
@@ -246,10 +280,13 @@
 
     <section id="simulateur" style="background:#eef5ef">
       <div class="wrap">
+        <div class="sim-intro">
         <div class="section-head">
           <div class="eyebrow">Outil gratuit · sans inscription</div>
           <h2>Quel chauffage serait le plus économique pour votre maison ?</h2>
           <p>Gaz, pompe à chaleur air/eau, chaudière à granulés : faites une première comparaison à partir de vos consommations et de vos propres hypothèses. Pas de promesse d'économies : tous les calculs sont expliqués.</p>
+        </div>
+        <img src="/assets/illustration-comparaison-chauffage.svg" width="960" height="680" alt="Comparateur des coûts de chauffage" loading="lazy" decoding="async">
         </div>
         <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr));align-items:stretch">
           <div class="card"><div class="num">01 · Votre consommation</div><h3>Partez de vos factures</h3><p>Indiquez votre consommation annuelle de chauffage et le rendement supposé de votre installation actuelle.</p></div>
@@ -352,41 +389,49 @@
         </div>
         <div class="articles">
           <article class="article">
+            <img class="article-thumb" src="/assets/illustration-comparaison-chauffage.svg" width="960" height="680" alt="Illustration de choix de chauffage" loading="lazy" decoding="async">
             <div class="tag">Chauffage</div>
             <h3><a href="/pac-ou-chaudiere.html">Pompe à chaleur ou autre système : comment raisonner sans se tromper ? →</a></h3>
             <p>Température d'émetteurs, consommation, confort, coût d'usage, investissement : les vrais critères à regarder avant de se lancer.</p>
           </article>
           <article class="article">
+            <img class="article-thumb" src="/assets/illustration-renovation.svg" width="960" height="680" alt="Maison et travaux d'isolation" loading="lazy" decoding="async">
             <div class="tag">Rénovation</div>
             <h3><a href="/isoler-avant-chauffage.html">Faut-il isoler avant de changer son chauffage ? →</a></h3>
             <p>Déperditions, ordre logique des travaux, cohérence globale du projet : un arbitrage souvent déterminant pour la suite.</p>
           </article>
 <article class="article">
+            <img class="article-thumb" src="/assets/illustration-comparaison-chauffage.svg" width="960" height="680" alt="Chauffage et radiateurs" loading="lazy" decoding="async">
             <div class="tag">PAC & radiateurs</div>
             <h3><a href="/pac-radiateurs-fonte.html">Une pompe à chaleur fonctionne-t-elle avec des radiateurs en fonte ? →</a></h3>
             <p>Température d'eau, taille des radiateurs, confort et performance : ce qu'il faut vérifier avant de signer un devis.</p>
           </article>
           <article class="article">
+            <img class="article-thumb" src="/assets/illustration-comparaison-chauffage.svg" width="960" height="680" alt="Comparaison du gaz et de la PAC" loading="lazy" decoding="async">
             <div class="tag">Remplacement gaz</div>
             <h3><a href="/remplacer-chaudiere-gaz.html">Faut-il remplacer une chaudière gaz encore fonctionnelle ? →</a></h3>
             <p>Comparer un maintien en service, un remplacement et une PAC sur un horizon réaliste.</p>
           </article>
           <article class="article">
+            <img class="article-thumb" src="/assets/illustration-comparaison-chauffage.svg" width="960" height="680" alt="Choix entre PAC et granulés" loading="lazy" decoding="async">
             <div class="tag">Comparaison chauffage</div>
             <h3><a href="/pac-ou-granules.html">Pompe à chaleur ou chaudière à granulés : comment choisir ? →</a></h3>
             <p>Rendements, investissement, stockage, entretien et contraintes d'usage.</p>
           </article>
           <article class="article">
+            <img class="article-thumb" src="/assets/illustration-renovation.svg" width="960" height="680" alt="Maison ancienne et déperditions" loading="lazy" decoding="async">
             <div class="tag">Maison ancienne</div>
             <h3><a href="/chauffage-maison-ancienne.html">Quel chauffage pour une maison ancienne en pierre ? →</a></h3>
             <p>Pourquoi les murs, les émetteurs et les projets d'isolation changent la réponse.</p>
           </article>
           <article class="article">
+            <img class="article-thumb" src="/assets/illustration-comparaison-chauffage.svg" width="960" height="680" alt="Simulation de coût du chauffage" loading="lazy" decoding="async">
             <div class="tag">Facture chauffage</div>
             <h3><a href="/cout-chauffage-120m2.html">Combien coûte le chauffage d'une maison de 120 m² ? →</a></h3>
             <p>Une méthode simple avec exemples chiffrés, sans inventer de coût moyen universel.</p>
           </article>
                     <article class="article">
+            <img class="article-thumb" src="/assets/illustration-solaire.svg" width="960" height="680" alt="Autoconsommation solaire" loading="lazy" decoding="async">
             <div class="tag">Photovoltaïque</div>
             <h3><a href="/photovoltaique-autoconsommation.html">Que peut réellement apporter le solaire en autoconsommation ? →</a></h3>
             <p>Production, simultanéité des usages, rentabilité, limites : l'essentiel pour éviter les promesses trop belles.</p>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simulateur chauffage gratuit : gaz, pompe à chaleur ou granulés ? — CAP DEGRÉ°</title>
+<meta name="description" content="Comparez gratuitement le coût annuel et sur 15 ou 20 ans du gaz, d'une pompe à chaleur air/eau et des granulés. Hypothèses modifiables et limites expliquées.">
+<link rel="canonical" href="https://capdegre.netlify.app/comparateur-chauffage.html">
+<meta property="og:title" content="Comparateur de chauffage gratuit — CAP DEGRÉ°">
+<meta property="og:description" content="Gaz, PAC air/eau ou granulés : comparez vos dépenses avec des hypothèses transparentes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://capdegre.netlify.app/comparateur-chauffage.html">
+<style>
+:root{--ink:#18313b;--sage:#688b77;--pale:#f7f6f1;--line:#dce5dd;--muted:#5e7074}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fcfbf8;line-height:1.6}a{color:var(--ink)}
+.wrap{max-width:1090px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(252,251,248,.97);border-bottom:1px solid var(--line)}
+nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-size:22px;font-weight:900;letter-spacing:.045em;text-decoration:none}.logo span{color:var(--sage)}.back{font-size:14px;font-weight:700;text-decoration:none}
+.hero{padding:52px 0 32px;background:linear-gradient(110deg,#eaf3eb,#fcfbf8)}h1{font-size:clamp(32px,4.8vw,57px);letter-spacing:-.045em;line-height:1.1;margin:12px 0}h2{font-size:clamp(23px,3vw,31px);letter-spacing:-.025em;margin:0 0 12px}h3{margin:0 0 9px;font-size:19px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.09em;color:#4c7760;text-transform:uppercase}.intro{max-width:750px;font-size:18px;color:#405961}
+.notice{padding:14px 18px;border:1px solid #d6e4d9;border-radius:14px;background:#f0f6f1;font-size:14px;margin-top:20px}
+main section{padding:36px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 12px 30px rgba(24,49,59,.04)}
+.inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}.field label{display:block;font-size:13px;font-weight:750;margin-bottom:5px}.field input,.field select{width:100%;height:43px;border:1px solid #c8d7cd;background:#fff;padding:8px 10px;border-radius:10px;font:inherit;font-size:15px;color:var(--ink)}.field input:focus,.field select:focus{outline:3px solid #b5cfbf}small,.hint{color:var(--muted);font-size:12px}.hint{display:block;margin-top:4px}.wide{grid-column:1/-1}
+button,.btn{font:inherit;font-weight:800;cursor:pointer;border-radius:999px;padding:13px 20px;display:inline-block;text-decoration:none;border:1px solid var(--ink)}button.primary,.btn.primary{background:var(--ink);color:#fff}.btn.secondary{background:#fff}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.micro{color:var(--muted);font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:12px 9px;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:var(--muted)}td strong{font-weight:850}.table-wrap{overflow-x:auto}
+#outcomes{min-height:170px}.winner{padding:15px;border-radius:12px;background:#eef5ef;border:1px solid #cce0d2;margin:16px 0}
+.bars{display:grid;gap:14px;margin:16px 0}.bar-label{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:4px}.track{height:13px;background:#eaf0eb;border-radius:9px;overflow:hidden}.fill{height:100%;background:#688b77;border-radius:9px}.fill.gas{background:#8a9da5}.fill.pellets{background:#b19a78}
+ul{padding-left:20px}li{margin-bottom:8px}.related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.related a{display:block;padding:15px;border:1px solid var(--line);border-radius:13px;background:#fff;text-decoration:none;font-weight:750}.related a:hover{background:#f0f6f1}
+footer{padding:30px 0;background:#edf3ee;font-size:13px;color:#405a55;margin-top:20px}footer a{margin-right:18px}
+@media(max-width:720px){.grid,.inputs,.related{grid-template-columns:1fr}.panel{padding:18px}.hero{padding-top:35px}.back{font-size:12px}.table-wrap{margin:0 -8px}th,td{min-width:90px;font-size:12px;padding:9px 6px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="logo" href="/">CAP DEGRÉ<span>°</span></a><a class="back" href="/#conseils">← Articles & conseils</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap">
+<div class="eyebrow">Outil gratuit · Comparaison indicative</div>
+<h1>Gaz, pompe à chaleur ou granulés : quel chauffage coûte le moins cher ?</h1>
+<p class="intro">Renseignez vos consommations et vos hypothèses de prix. Comparez le coût annuel et le coût cumulé de trois solutions, sans devis ni inscription.</p>
+<div class="notice"><strong>À savoir :</strong> ce simulateur est un outil pédagogique de pré-comparaison. Il n'est ni un dimensionnement, ni un audit énergétique, ni une promesse d'économies. Les valeurs sont des exemples modifiables, pas des tarifs vérifiés pour votre logement.</div>
+</div></section>
+<section><div class="wrap grid">
+<div class="panel">
+<h2>1. Votre situation</h2>
+<p class="micro">Commencez par renseigner le gaz consommé pour le <strong>chauffage seulement</strong>. Si le gaz sert aussi à l'eau chaude ou à la cuisine, retirez ces usages avant de comparer.</p>
+<div class="inputs">
+<div class="field"><label for="gaz">Consommation annuelle de gaz — chauffage (kWh/an)</label><input id="gaz" type="number" min="1000" max="100000" step="100" value="18000"><span class="hint">Consommation facturée, pas le besoin thermique</span></div>
+<div class="field"><label for="rendgaz">Rendement moyen estimé de la chaudière gaz (%)</label><input id="rendgaz" type="number" min="55" max="105" step="1" value="85"><span class="hint">À préciser selon âge et fonctionnement</span></div>
+<div class="field"><label for="gazprix">Prix du gaz (€/kWh TTC)</label><input id="gazprix" type="number" min="0" max="2" step="0.01" value="0.11"></div>
+<div class="field"><label for="elecprix">Prix de l'électricité (€/kWh TTC)</label><input id="elecprix" type="number" min="0" max="2" step="0.01" value="0.25"></div>
+<div class="field"><label for="boisprix">Prix des granulés (€/kWh combustible TTC)</label><input id="boisprix" type="number" min="0" max="2" step="0.01" value="0.09"><span class="hint">Exemple : 450 €/t ÷ 5 000 kWh/t = 0,09 €/kWh</span></div>
+<div class="field"><label for="scop">SCOP envisagé de la PAC air/eau</label><input id="scop" type="number" min="1.2" max="6" step="0.1" value="2.8"><span class="hint">Dépend des émetteurs et de l'installation</span></div>
+<div class="field"><label for="rendbois">Rendement chaudière granulés (%)</label><input id="rendbois" type="number" min="65" max="100" step="1" value="88"></div>
+<div class="field"><label for="duree">Horizon de comparaison</label><select id="duree"><option value="15">15 ans</option><option value="20" selected>20 ans</option></select></div>
+</div>
+<h3 style="margin-top:26px">2. Investissement et frais annuels</h3>
+<p class="micro">Modifiez les valeurs selon les devis et contrats. Pour le gaz, 0 € correspond à la conservation de l'installation existante ; indiquez un montant si son remplacement est prévu.</p>
+<div class="inputs">
+<div class="field"><label for="igaz">Investissement gaz (€)</label><input id="igaz" type="number" min="0" max="150000" step="100" value="0"></div>
+<div class="field"><label for="ipac">Investissement PAC (€)</label><input id="ipac" type="number" min="0" max="150000" step="100" value="14000"></div>
+<div class="field"><label for="ibois">Investissement granulés (€)</label><input id="ibois" type="number" min="0" max="150000" step="100" value="18500"></div>
+<div class="field"><label for="egaz">Entretien et autres frais gaz (€/an)</label><input id="egaz" type="number" min="0" max="10000" step="10" value="470"><span class="hint">Exemple : entretien + abonnement gaz</span></div>
+<div class="field"><label for="epac">Entretien et frais PAC (€/an)</label><input id="epac" type="number" min="0" max="10000" step="10" value="220"><span class="hint">Abonnement électrique supplémentaire éventuel à intégrer</span></div>
+<div class="field"><label for="ebois">Entretien et frais granulés (€/an)</label><input id="ebois" type="number" min="0" max="10000" step="10" value="350"><span class="hint">Ramonage et entretien notamment</span></div>
+</div>
+<div class="actions"><button id="calculate" class="primary" type="button">Comparer les trois solutions</button><button id="reset" type="button">Réinitialiser</button></div>
+<p id="error" role="alert" style="color:#9b2b2b;font-weight:700" hidden></p>
+</div>
+<div class="panel">
+<h2>3. Résultats de la comparaison</h2>
+<p class="micro">Coûts constants en euros TTC, sans hausse future des prix, inflation, actualisation, aides, intérêts d'emprunt ni remplacement futur d'équipement.</p>
+<div id="outcomes" aria-live="polite"></div>
+<div id="breakdown"></div>
+<p class="micro">La PAC et les granulés sont supposés couvrir les mêmes besoins utiles de chauffage que la chaudière gaz, en conservant le même confort.</p>
+<p class="micro"><strong>Important :</strong> les résultats ignorent pour l'instant le coût d'éventuels travaux sur les radiateurs, l'électricité, la fumisterie ou l'hydraulique s'ils ne sont pas intégrés dans l'investissement saisi.</p>
+<a class="btn primary" href="/?sujet=chauffage#contact" id="discuss">Parler de mon projet</a>
+<p class="micro">CAP DEGRÉ° est en phase de développement : ce contact sert à comprendre votre besoin, sans engagement ni offre commerciale immédiate.</p>
+</div>
+</div></section>
+<section><div class="wrap">
+<h2>Comment interpréter ces résultats ?</h2>
+<div class="grid">
+<div class="panel"><h3>Une première comparaison, pas un choix définitif</h3>
+<p>La comparaison se fonde sur le besoin de chaleur estimé à partir du gaz actuel. Une chaudière ancienne, un logement mal isolé, des températures de radiateurs élevées ou un mauvais réglage peuvent modifier fortement les performances réelles.</p>
+<p>Un investissement de remplacement peut nécessiter des travaux supplémentaires. Un système neuf peut aussi apporter d'autres bénéfices : confort, moindre dépendance à une énergie ou suppression d'une installation vétuste.</p></div>
+<div class="panel"><h3>Les vérifications indispensables</h3>
+<ul><li>Consommation réelle corrigée des autres usages éventuels et des périodes d'occupation.</li><li>Température de départ d'eau en hiver, puissance des émetteurs et déperditions de la maison.</li><li>Montants des devis, configuration des lieux, nuisances sonores et maintenance.</li><li>Travaux d'isolation envisagés avant de choisir la puissance du futur système.</li></ul></div>
+</div>
+</div></section>
+<section style="background:#f2f6f2"><div class="wrap">
+<h2>Approfondir avant de décider</h2>
+<div class="related">
+<a href="/pac-radiateurs-fonte.html">PAC air/eau et radiateurs en fonte : est-ce compatible ? →</a>
+<a href="/remplacer-chaudiere-gaz.html">Faut-il remplacer une chaudière gaz encore fonctionnelle ? →</a>
+<a href="/pac-ou-granules.html">Pompe à chaleur ou chaudière à granulés : les vrais critères →</a>
+<a href="/chauffage-maison-ancienne.html">Quel chauffage pour une maison ancienne ? →</a>
+<a href="/cout-chauffage-120m2.html">Chauffage d'une maison de 120 m² : comment estimer la facture ? →</a>
+<a href="/isoler-avant-chauffage.html">Isolation avant changement de chauffage : dans quel ordre ? →</a>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap"><strong>CAP DEGRÉ°</strong> · Faire les bons choix, ça change tout.<br>
+Projet indépendant en développement · <a href="/">Accueil</a> <a href="/#contact">Contact</a> <a href="#choix-statistiques" data-manage-matomo>Gérer les statistiques</a></div></footer>
+<script>
+(function(){
+'use strict';
+const defaults={gaz:18000,rendgaz:85,gazprix:.11,elecprix:.25,boisprix:.09,scop:2.8,rendbois:88,duree:20,igaz:0,ipac:14000,ibois:18500,egaz:470,epac:220,ebois:350};
+const ids=Object.keys(defaults);
+const euro=n=>new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
+const num=n=>new Intl.NumberFormat('fr-FR',{maximumFractionDigits:0}).format(n);
+function val(id){return Number(document.getElementById(id).value);}
+function track(action){try{if(localStorage.getItem('capdegre_matomo_choice_v1')==='yes'&&window._paq){window._paq.push(['trackEvent','Simulateur chauffage',action]);}}catch(e){}}
+function render(){
+const v={};for(const id of ids){v[id]=val(id);if(!Number.isFinite(v[id])||v[id]<0){showError('Veuillez vérifier les valeurs renseignées.');return;}}
+if(v.gaz<1000||v.gaz>100000||v.rendgaz<55||v.rendgaz>105||v.rendbois<65||v.rendbois>100||v.scop<1.2||v.scop>6||v.gazprix<=0||v.elecprix<=0||v.boisprix<=0){showError('Vérifiez la consommation, les prix et les rendements : une valeur semble hors plage.');return;}
+document.getElementById('error').hidden=true;
+const heat=v.gaz*v.rendgaz/100;
+const arr=[
+{key:'gas',name:'Gaz',inv:v.igaz,year:v.gaz*v.gazprix+v.egaz,kwh:v.gaz},
+{key:'pac',name:'PAC air/eau',inv:v.ipac,year:heat/v.scop*v.elecprix+v.epac,kwh:heat/v.scop},
+{key:'pellets',name:'Granulés',inv:v.ibois,year:heat/(v.rendbois/100)*v.boisprix+v.ebois,kwh:heat/(v.rendbois/100)}
+];
+for(const a of arr)a.total=a.inv+a.year*v.duree;
+const best=[...arr].sort((a,b)=>a.total-b.total)[0],max=Math.max(...arr.map(a=>a.total)),gas=arr[0];
+document.getElementById('outcomes').innerHTML=
+'<div class="winner"><strong>Dans ces hypothèses, coût cumulé le plus faible : '+best.name+'</strong><br>Sur '+v.duree+' ans : '+euro(best.total)+'. Ce classement peut changer si vos prix, consommations ou travaux évoluent.</div>'+
+'<div class="table-wrap"><table><thead><tr><th>Solution</th><th>Énergie/an</th><th>Coût/an*</th><th>Coût total</th></tr></thead><tbody>'+
+arr.map(a=>'<tr><td><strong>'+a.name+'</strong></td><td>'+num(a.kwh)+' kWh</td><td>'+euro(a.year)+'</td><td><strong>'+euro(a.total)+'</strong></td></tr>').join('')+
+'</tbody></table></div><p class="micro">* Coût annuel = énergie + entretien/frais renseignés. Le coût total ajoute l’investissement initial.</p>'+
+'<p class="micro"><strong>Besoin utile estimé :</strong> '+num(heat)+' kWh/an ('+num(v.gaz)+' × '+v.rendgaz+' %). Cette conversion est simplifiée et doit être vérifiée.</p>';
+document.getElementById('breakdown').innerHTML='<h3 style="margin-top:24px">Coût cumulé sur '+v.duree+' ans</h3><div class="bars">'+arr.map(a=>'<div><div class="bar-label"><span>'+a.name+'</span><strong>'+euro(a.total)+'</strong></div><div class="track"><div class="fill '+a.key+'" style="width:'+((a.total/max)*100).toFixed(1)+'%"></div></div></div>').join('')+'</div>'+
+'<p class="micro">Écart entre PAC et maintien du gaz : '+euro(arr[1].total-gas.total)+' (valeur positive : PAC plus coûteuse ; négative : PAC moins coûteuse). Le remplacement futur de la chaudière gaz n’est pas modélisé sauf si vous renseignez son investissement.</p>';
+}
+function showError(msg){const e=document.getElementById('error');e.textContent=msg;e.hidden=false;}
+document.getElementById('calculate').addEventListener('click',function(){render();if(document.getElementById('error').hidden)track('Comparaison effectuée');});
+document.getElementById('reset').addEventListener('click',function(){for(const id of ids)document.getElementById(id).value=defaults[id];render();});
+document.getElementById('discuss').addEventListener('click',function(){track('Clic contact après simulation');});
+render();
+})();
+</script>
+<script defer src="/matomo-consent.js"></script>
+</body>
+</html>

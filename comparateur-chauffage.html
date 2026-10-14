@@ -27,17 +27,18 @@ table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:12px 9px;
 ul{padding-left:20px}li{margin-bottom:8px}.related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.related a{display:block;padding:15px;border:1px solid var(--line);border-radius:13px;background:#fff;text-decoration:none;font-weight:750}.related a:hover{background:#f0f6f1}
 footer{padding:30px 0;background:#edf3ee;font-size:13px;color:#405a55;margin-top:20px}footer a{margin-right:18px}
 @media(max-width:720px){.grid,.inputs,.related{grid-template-columns:1fr}.panel{padding:18px}.hero{padding-top:35px}.back{font-size:12px}.table-wrap{margin:0 -8px}th,td{min-width:90px;font-size:12px;padding:9px 6px}}
+.hero-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.hero-art img{display:block;width:100%;height:auto;max-width:430px;border-radius:20px;border:1px solid #d3e4d7;box-shadow:0 12px 28px rgba(24,49,59,.06)}@media(max-width:720px){.hero-layout{grid-template-columns:1fr}.hero-art img{max-width:520px;margin:auto}}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav><a class="logo" href="/">CAP DEGRÉ<span>°</span></a><a class="back" href="/#conseils">← Articles & conseils</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap">
+<section class="hero"><div class="wrap hero-layout"><div>
 <div class="eyebrow">Outil gratuit · Comparaison indicative</div>
 <h1>Gaz, pompe à chaleur ou granulés : quel chauffage coûte le moins cher ?</h1>
 <p class="intro">Renseignez vos consommations et vos hypothèses de prix. Comparez le coût annuel et le coût cumulé de trois solutions, sans devis ni inscription.</p>
 <div class="notice"><strong>À savoir :</strong> ce simulateur est un outil pédagogique de pré-comparaison. Il n'est ni un dimensionnement, ni un audit énergétique, ni une promesse d'économies. Les valeurs sont des exemples modifiables, pas des tarifs vérifiés pour votre logement.</div>
-</div></section>
+</div><div class="hero-art"><img src="/assets/illustration-comparaison-chauffage.svg" width="960" height="680" alt="Illustration comparant PAC, gaz et chauffage aux granulés" fetchpriority="high" decoding="async"></div></div></section>
 <section><div class="wrap grid">
 <div class="panel">
 <h2>1. Votre situation</h2>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" role="img" aria-label="Comparaison des systèmes de chauffage">
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e9f3eb"/><stop offset="1" stop-color="#f9f8f2"/></linearGradient>
+<filter id="sh"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#1d3940" flood-opacity=".13"/></filter>
+</defs>
+<rect width="960" height="680" rx="36" fill="url(#bg)"/>
+<circle cx="820" cy="100" r="180" fill="#d6e9df"/>
+<g filter="url(#sh)">
+<rect x="120" y="118" width="720" height="417" rx="30" fill="#264451"/>
+<rect x="143" y="140" width="674" height="355" rx="17" fill="#fff"/>
+<path d="M90 537H869L814 579H146Z" fill="#bfd0ce"/>
+</g>
+<g font-family="system-ui" fill="#25434d">
+<text x="174" y="187" font-size="24" font-weight="800">Comparer les chauffages</text>
+<text x="201" y="263" font-size="18" font-weight="800">PAC</text>
+<text x="423" y="263" font-size="18" font-weight="800">GAZ</text>
+<text x="641" y="263" font-size="18" font-weight="800">BOIS</text>
+</g>
+<rect x="175" y="211" width="198" height="88" rx="18" fill="#e7f2e9"/>
+<rect x="387" y="211" width="198" height="88" rx="18" fill="#e7f0f5"/>
+<rect x="599" y="211" width="198" height="88" rx="18" fill="#f5efe5"/>
+<g transform="translate(183 229)"><rect width="52" height="52" rx="10" fill="#7ea991"/><circle cx="26" cy="26" r="19" fill="#344d55"/><circle cx="26" cy="26" r="13" stroke="#cadfdb" stroke-width="5" fill="none"/></g>
+<path d="M441 227C465 249 452 275 434 273C417 269 422 251 441 227Z" fill="#6395b0"/>
+<path d="M648 252l23 -26 23 26v27h-46Z" fill="#c3a074"/><rect x="657" y="255" width="28" height="17" rx="3" fill="#8d6a4e"/>
+<path d="M176 453H787M176 408H787M176 363H787" stroke="#e2ede8" stroke-width="3"/>
+<path d="M180 452L287 426L396 396L505 381L610 352L786 333" stroke="#72a388" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M180 462L287 446L396 427L505 411L610 396L786 372" stroke="#6797b4" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M180 462L287 451L396 446L505 434L610 416L786 401" stroke="#bba078" stroke-width="7" fill="none" stroke-linecap="round"/>
+<g fill="#e4efe3"><circle cx="108" cy="605" r="56"/><circle cx="856" cy="604" r="67"/></g>
+<g fill="#83b092"><ellipse cx="94" cy="591" rx="28" ry="59" transform="rotate(-23 94 591)"/><ellipse cx="129" cy="589" rx="30" ry="65" transform="rotate(20 129 589)"/><ellipse cx="839" cy="591" rx="39" ry="64" transform="rotate(-25 839 591)"/></g>
+</svg>

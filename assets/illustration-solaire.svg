@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" role="img" aria-label="Autoconsommation solaire d'une maison">
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#ecf5ec"/><stop offset="1" stop-color="#f9f8f2"/></linearGradient>
+<linearGradient id="roof" x2="1" y2="1"><stop stop-color="#516c7b"/><stop offset="1" stop-color="#2a414d"/></linearGradient>
+<filter id="sh"><feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#24424c" flood-opacity=".12"/></filter>
+</defs>
+<rect width="960" height="680" rx="36" fill="url(#bg)"/>
+<circle cx="149" cy="144" r="67" fill="#f8d489"/>
+<g stroke="#eabf74" stroke-width="9" stroke-linecap="round"><path d="M149 43V56M149 236V248M48 144H60M239 144H253M78 73L88 84M208 204L220 216M78 215L89 204M209 83L222 71"/></g>
+<ellipse cx="470" cy="610" rx="370" ry="32" fill="#c8ddc9"/>
+<g filter="url(#sh)">
+<path d="M266 325L471 207L664 326V550L471 634L266 550Z" fill="#f6f6ee" stroke="#cddbd0" stroke-width="5"/>
+<path d="M471 424L664 326V550L471 634Z" fill="#e0e9e3" stroke="#bfd0c5" stroke-width="4"/>
+<path d="M213 322L468 173L712 318L665 348L469 232L260 352Z" fill="url(#roof)" stroke="#243e4b" stroke-width="6"/>
+<path d="M468 173L609 90L831 224L712 318Z" fill="#34515e" stroke="#243e4b" stroke-width="6"/>
+<path d="M517 179L630 116L771 205L655 269Z" fill="#236890" stroke="#b0d8ee" stroke-width="5"/>
+<g stroke="#a2d2e5" stroke-width="3"><path d="M546 163L687 253M574 147L714 235M602 130L742 220M563 152L542 237M612 125L589 258M669 142L646 272M716 170L693 291"/></g>
+<rect x="315" y="392" width="91" height="103" rx="4" fill="#c5dad9" stroke="#fff" stroke-width="10"/><path d="M359 395V491M319 442H402" stroke="#fff" stroke-width="7"/>
+<rect x="524" y="415" width="95" height="109" rx="4" fill="#d0e1d5" stroke="#fff" stroke-width="10"/>
+<path d="M567 417V523M528 467H616" stroke="#fff" stroke-width="7"/>
+<rect x="395" y="500" width="65" height="135" rx="20" fill="#8ca298" stroke="#fff" stroke-width="9"/>
+</g>
+<path d="M201 217Q289 176 376 227" fill="none" stroke="#f0bd69" stroke-width="10" stroke-linecap="round"/><path d="M366 211L389 235L354 235Z" fill="#f0bd69"/>
+<path d="M673 360Q734 371 772 416" fill="none" stroke="#75a88e" stroke-width="10" stroke-linecap="round"/><path d="M747 411L787 433L780 392Z" fill="#75a88e"/>
+<g filter="url(#sh)">
+<rect x="73" y="412" width="156" height="189" rx="23" fill="#fafdfb" stroke="#c9dbd1" stroke-width="4"/>
+<rect x="101" y="440" width="100" height="124" rx="13" fill="#dfeee3"/><rect x="119" y="465" width="65" height="76" rx="14" fill="#8eb69a"/><path d="M135 498L149 510L172 482" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/>
+<rect x="696" y="450" width="206" height="155" rx="23" fill="#fff" stroke="#cbded2" stroke-width="4"/>
+<text x="715" y="487" font-size="17" font-family="system-ui" font-weight="800" fill="#254a4b">CONSOMMER</text>
+<path d="M723 559H874" stroke="#e0ece4" stroke-width="4"/>
+<rect x="731" y="524" width="27" height="35" rx="5" fill="#b4d5ba"/><rect x="775" y="504" width="27" height="55" rx="5" fill="#91be9f"/><rect x="819" y="493" width="27" height="66" rx="5" fill="#6fa58e"/>
+</g>
+<g fill="#8ab497"><ellipse cx="84" cy="345" rx="28" ry="70" transform="rotate(-23 84 345)"/><ellipse cx="129" cy="349" rx="29" ry="75" transform="rotate(22 129 349)"/><ellipse cx="854" cy="362" rx="35" ry="83" transform="rotate(18 854 362)"/></g>
+</svg>

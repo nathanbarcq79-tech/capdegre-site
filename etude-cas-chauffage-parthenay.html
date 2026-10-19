@@ -21,7 +21,7 @@
 <p>Les attentes : améliorer le confort, disposer idéalement d'un rafraîchissement estival et éviter d'investir trop lourdement avant une éventuelle revente. L'état réel du conduit et la possibilité d'installer un insert restent à confirmer.</p>
 <h2>2. Les pistes étudiées</h2>
 <ul><li><strong>Conserver le gaz :</strong> solution de référence avec peu de travaux immédiats, mais dépendance au gaz et à l'état de la chaudière.</li>
-<li><strong>Ajouter une PAC air-air :</strong> chauffage et rafraîchissement possibles dans les pièces desservies ; la répartition de chaleur et l'appoint gaz sont déterminants.</li>
+<li><strong>Étudier une PAC air-air :</strong> chauffage et rafraîchissement possibles dans les pièces desservies ; la répartition de chaleur et l'appoint gaz sont déterminants.</li>
 <li><strong>Associer gaz et insert bois :</strong> recours au bois dans la pièce de vie, sous réserve de faisabilité du conduit, de confort et d'usage quotidien.</li>
 <li><strong>Remplacer par une PAC air-eau :</strong> piste à analyser, mais à confronter aux températures exigées par les radiateurs, au dimensionnement et au budget maximal.</li></ul></div></section>
 <section style="background:#f0f5f0" id="comparatif"><div class="wrap">
@@ -47,9 +47,26 @@
 </tbody></table></div>
 <p>Cette comparaison montre pourquoi <strong>la PAC air-air mérite d'être approfondie</strong> : dans le scénario de travail, elle conjugue rafraîchissement et coût cumulé compétitif sur 10 ans. Mais elle ne garantit ni le confort dans toutes les chambres ni les économies prévues. Le gaz conservé suppose que la chaudière reste opérationnelle ; son remplacement éventuel n'est pas compté.</p>
 </div></section>
-<section><div class="wrap"><h2>6. Ce qui peut faire basculer la décision</h2>
+<section><div class="wrap"><h2>Tester la sensibilité aux prix de l’énergie</h2>
+<p>Un prix de l'énergie peut évoluer durant les 5 à 10 années de détention. Modifiez les trois valeurs ci-dessous pour voir comment le classement économique change, à <strong>consommations et investissements constants</strong>. Ce test ne prévoit pas l'évolution future des tarifs.</p>
+<div class="card" id="sensibilite-parthenay" style="margin:22px 0">
+<div class="cards" style="margin:0 0 12px">
+<label for="prix-gaz">Gaz (€ / kWh)<input id="prix-gaz" type="number" min="0.01" max="1" step="0.01" value="0.1456" style="display:block;width:100%;margin-top:8px;padding:11px;font:inherit;border:1px solid #b5c8bd;border-radius:9px"></label>
+<label for="prix-elec">Électricité (€ / kWh)<input id="prix-elec" type="number" min="0.01" max="1" step="0.01" value="0.20" style="display:block;width:100%;margin-top:8px;padding:11px;font:inherit;border:1px solid #b5c8bd;border-radius:9px"></label>
+<label for="prix-bois">Bois (€ / kWh combustible)<input id="prix-bois" type="number" min="0.01" max="1" step="0.01" value="0.08" style="display:block;width:100%;margin-top:8px;padding:11px;font:inherit;border:1px solid #b5c8bd;border-radius:9px"></label>
+</div>
+<div class="table-scroll" style="margin:0"><table><thead><tr><th scope="col">Scénario</th><th scope="col">Énergie / an</th><th scope="col">Cumul à 5 ans</th><th scope="col">Cumul à 10 ans</th></tr></thead>
+<tbody><tr><th scope="row">Gaz conservé</th><td id="s-gaz-an">—</td><td id="s-gaz-5">—</td><td id="s-gaz-10">—</td></tr>
+<tr><th scope="row">PAC air-eau</th><td id="s-eau-an">—</td><td id="s-eau-5">—</td><td id="s-eau-10">—</td></tr>
+<tr><th scope="row">PAC air-air et appoint électrique</th><td id="s-air-an">—</td><td id="s-air-5">—</td><td id="s-air-10">—</td></tr>
+<tr><th scope="row">Gaz + insert bois</th><td id="s-bois-an">—</td><td id="s-bois-5">—</td><td id="s-bois-10">—</td></tr></tbody></table></div>
+<p id="sensibilite-message" role="status" style="font-size:14px;color:#355b4c">Calcul fondé sur les valeurs initiales du rapport pilote.</p>
+<button type="button" id="reset-prix" style="background:#18313b;color:white;border:0;border-radius:22px;padding:10px 18px;font:inherit;cursor:pointer">Revenir aux hypothèses du rapport</button>
+</div>
+<div class="note">Le calcul inclut 361 €/an d'abonnement gaz dans les scénarios qui conservent le gaz. Il utilise 15 000 kWh de gaz pour la référence, 4 034 kWh électriques pour la PAC air-eau, 4 660 kWh électriques pour la PAC air-air (dont une hypothèse de 200 kWh de rafraîchissement), et 9 000 kWh de gaz + 6 240 kWh de bois pour le scénario insert. Investissements retenus : 0, 14 000, 9 000 et 4 500 € respectivement. Entretien, remplacement, financement et aides exclus.</div>
+<h2>6. Ce qui peut faire basculer la décision</h2>
 <ul><li><strong>Déperditions par pièce :</strong> elles conditionnent la puissance et la répartition des unités intérieures.</li><li><strong>Plan de la maison :</strong> une PAC air-air ne chauffera pas automatiquement toutes les pièces de façon uniforme.</li><li><strong>Consommation de gaz réelle :</strong> il faut isoler la part chauffage pour recalibrer les hypothèses.</li><li><strong>Radiateurs et température de départ :</strong> incontournables pour juger la pertinence d'une PAC air-eau.</li><li><strong>Devis complets :</strong> coût posé, raccordements, électricité, finitions, entretien et éventuelles adaptations.</li><li><strong>Usage du bois :</strong> disponibilité, stockage, manutention, émissions locales et faisabilité du conduit.</li></ul>
-<h2>7. Notre lecture provisoire</h2><p>Avec un budget maximal de 10 000 € et un souhait de rafraîchissement, <strong>la PAC air-air en complément du gaz mérite une étude prioritaire</strong>, à condition que le plan permette une bonne diffusion de l'air. <strong>Le gaz + insert</strong> reste une autre piste cohérente si le bois correspond aux usages des occupants. Une PAC air-eau ne doit pas être retenue sans contrôle technique et chiffrage détaillé.</p>
+<h2>7. Notre lecture provisoire</h2><p>Avec un budget maximal de 10 000 € et un souhait de rafraîchissement, <strong>une PAC air-air avec appoint électrique mérite une étude prioritaire</strong>, à condition que le plan permette une bonne diffusion de l'air. <strong>Le gaz + insert</strong> reste une autre piste cohérente si le bois correspond aux usages des occupants. Une PAC air-eau ne doit pas être retenue sans contrôle technique et chiffrage détaillé.</p>
 <p><strong>Aucune solution n'est recommandée définitivement à ce stade.</strong> La décision dépend des consommations réelles, des besoins par pièce, de la faisabilité et des devis. C'est précisément l'intérêt d'une analyse indépendante : éliminer les mauvaises hypothèses avant de signer.</p>
 <p>Pour refaire une comparaison avec vos propres hypothèses, utilisez le <a href="/comparateur-chauffage.html">comparateur de chauffage gratuit</a>. Pour analyser deux propositions d'entreprises, consultez la <a href="/verifier-devis-chauffage.html">grille de vérification des devis</a>.</p>
 </div></section>
@@ -65,4 +82,21 @@
 </div></section>
 <section class="cta"><div class="wrap"><h2>Votre maison pose les mêmes questions ?</h2><p>Décrivez votre logement, votre chauffage et vos hésitations. CAP DEGRÉ° est en phase de lancement : les demandes permettent de préciser les besoins et le futur format de conseil, sans engagement commercial.</p><a class="btn" href="/?sujet=chauffage#contact">Présenter mon projet →</a></div></section></main>
 <footer><div class="wrap">CAP DEGRÉ° · Conseil indépendant en énergie et rénovation · <a href="/">Accueil</a> · <a href="#choix-statistiques" data-manage-matomo>Gérer les statistiques</a></div></footer>
+<script>
+(function(){
+const defaults={gaz:0.1456,elec:0.20,bois:0.08};
+const field={gaz:document.getElementById('prix-gaz'),elec:document.getElementById('prix-elec'),bois:document.getElementById('prix-bois')};
+if(!field.gaz||!field.elec||!field.bois)return;
+const euro=n=>Math.round(n).toLocaleString('fr-FR')+' €';
+function render(){
+const v={};for(const k of Object.keys(field)){v[k]=Number(field[k].value);if(!Number.isFinite(v[k])||v[k]<0.01||v[k]>1){document.getElementById('sensibilite-message').textContent='Indiquez un tarif entre 0,01 et 1 €/kWh pour chaque énergie.';return;}}
+const cases={gaz:{inv:0,year:15000*v.gaz+361},eau:{inv:14000,year:4034*v.elec},air:{inv:9000,year:4660*v.elec},bois:{inv:4500,year:9000*v.gaz+361+6240*v.bois}};
+for(const [k,data] of Object.entries(cases)){document.getElementById('s-'+k+'-an').textContent=euro(data.year);document.getElementById('s-'+k+'-5').textContent=euro(data.inv+5*data.year);document.getElementById('s-'+k+'-10').textContent=euro(data.inv+10*data.year);}
+document.getElementById('sensibilite-message').textContent='Simulation illustrative actualisée : seules les valeurs de prix saisies changent.';
+}
+for(const el of Object.values(field))el.addEventListener('input',render);
+document.getElementById('reset-prix').addEventListener('click',()=>{for(const k of Object.keys(field))field[k].value=defaults[k];render();});
+render();
+})();
+</script>
 <script defer src="/matomo-consent.js"></script></body></html>

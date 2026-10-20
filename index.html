@@ -614,6 +614,15 @@
   <script>
   (function(){try{const p=new URLSearchParams(window.location.search);if(p.get("sujet")==="chauffage"){const s=document.getElementById("kind");if(s)s.value="Rénovation / chauffage";}}catch(e){}})();
   </script>
+  <script>
+  (function(){
+    var form=document.getElementById('contactForm');
+    if(!form)return;
+    form.addEventListener('submit',function(){
+      try{window.sessionStorage.setItem('capdegre_contact_submitted','1');}catch(e){}
+    });
+  })();
+  </script>
   <script defer src="/matomo-consent.js"></script>
 </body>
 </html>

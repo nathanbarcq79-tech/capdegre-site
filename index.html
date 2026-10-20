@@ -568,9 +568,9 @@
           </div>
         </div>
 
-        <form id="contactForm" name="contact" method="POST" data-netlify="true" action="/merci.html">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="hidden"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <form id="contactForm" name="contact" method="POST" action="https://formspree.io/f/mljgynqd">
+          <input type="hidden" name="_subject" value="Nouveau contact CAP DEGRÉ°">
+          <p class="hidden"><label>Ne pas remplir : <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
 
           <label for="name">Votre nom (facultatif)</label>
           <input id="name" name="name" autocomplete="name" maxlength="100">
@@ -596,6 +596,7 @@
           <label class="check"><input type="checkbox" id="consent" name="consent" value="oui" required>J'accepte que les informations fournies soient utilisées pour répondre à ma demande. *</label>
 
           <button type="submit" class="btn primary" style="width:100%;margin-top:18px">Partager mon projet</button>
+          <p id="contactStatus" role="status" aria-live="polite" style="margin-top:12px"></p>
           <div class="note">Vos données sont utilisées uniquement pour traiter votre demande de contact. Les mentions légales, la politique de confidentialité et les informations sur le responsable du traitement restent à finaliser avant communication large du site.</div>
         </form>
       </div>
@@ -641,8 +642,26 @@
   (function(){
     var form=document.getElementById('contactForm');
     if(!form)return;
-    form.addEventListener('submit',function(){
-      try{window.sessionStorage.setItem('capdegre_contact_submitted','1');}catch(e){}
+    var status=document.getElementById('contactStatus');
+    var submit=form.querySelector('button[type="submit"]');
+    form.addEventListener('submit',async function(event){
+      event.preventDefault();
+      if(!form.reportValidity())return;
+      status.textContent='Envoi de votre message en cours…';
+      submit.disabled=true;
+      try{
+        var response=await fetch(form.action,{
+          method:'POST',
+          body:new FormData(form),
+          headers:{'Accept':'application/json'}
+        });
+        if(!response.ok)throw new Error('Formspree HTTP '+response.status);
+        try{window.sessionStorage.setItem('capdegre_contact_submitted','1');}catch(e){}
+        window.location.assign('/merci.html');
+      }catch(error){
+        status.textContent="L'envoi n'a pas abouti. Merci de réessayer dans quelques instants.";
+        submit.disabled=false;
+      }
     });
   })();
   </script>

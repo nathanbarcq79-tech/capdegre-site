@@ -109,6 +109,8 @@
     .tag{display:inline-flex;padding:8px 10px;border-radius:999px;background:#edf4ef;color:#587a69;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
     .article h3{font-size:22px;line-height:1.25;letter-spacing:-.025em;margin:16px 0 10px}
     .article p{margin:0;color:var(--muted);font-size:15px}
+    .card-cta{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;padding:10px 15px;border-radius:11px;background:#edf4ef;color:#28553f;font-weight:800;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+    .card-cta:hover,.card-cta:focus-visible{background:#dceadd;outline-offset:3px}
 
     .faq{background:#eef3ee}
     .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -331,6 +333,7 @@
               <li>Estimer des enveloppes budgétaires indicatives.</li>
             </ul>
             <small><strong>Restitution envisagée :</strong> synthèse des points de vigilance, travaux à étudier en priorité, enveloppes indicatives et liste des vérifications à mener avant achat. Sans expertise structurelle ni diagnostic réglementaire.</small>
+            <a class="card-cta" href="/?sujet=achat#contact">Présenter mon projet d’achat →</a>
           </article>
 
           <article class="card">
@@ -344,6 +347,7 @@
               <li>Éclairer la décision avec des hypothèses et des ordres de grandeur chiffrés.</li>
             </ul>
             <small><strong>Restitution envisagée :</strong> tableau comparatif de scénarios, investissement et coût d’usage sous hypothèses, points de vigilance et questions à poser aux entreprises. <a href="/etude-cas-maison-ouest-france.html" style="text-decoration:underline">Voir une étude de cas chiffrée →</a></small>
+            <a class="card-cta" href="/?sujet=renovation#contact">Présenter mon projet de rénovation →</a>
           </article>
 
           <article class="card">
@@ -357,6 +361,7 @@
               <li>Disposer d'un regard transversal avant de s'engager.</li>
             </ul>
             <small><strong>Restitution envisagée :</strong> priorités techniques, scénarios de principe, contraintes identifiées et feuille de route avant consultation de professionnels. Sans mission de conception d’exécution ou de maîtrise d’œuvre.</small>
+            <a class="card-cta" href="/?sujet=global#contact">Présenter mon projet global →</a>
           </article>
         </div>
       </div>
@@ -612,7 +617,19 @@
     </div>
   </footer>
   <script>
-  (function(){try{const p=new URLSearchParams(window.location.search);if(p.get("sujet")==="chauffage"){const s=document.getElementById("kind");if(s)s.value="Rénovation / chauffage";}}catch(e){}})();
+  (function(){
+    try{
+      var p=new URLSearchParams(window.location.search);
+      var choice={
+        chauffage:"Rénovation / chauffage",
+        renovation:"Rénovation / chauffage",
+        achat:"Conseil avant achat immobilier",
+        global:"Construction neuve / projet global"
+      }[p.get("sujet")];
+      var field=document.getElementById("kind");
+      if(field&&choice)field.value=choice;
+    }catch(e){}
+  })();
   </script>
   <script>
   (function(){

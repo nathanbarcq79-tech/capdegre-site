@@ -30,6 +30,18 @@
       <a class="secondary" href="/#prestations">Voir les prestations</a>
     </div>
   <p style="font-size:13px;margin-top:25px"><a style="background:transparent;color:#18313b;border:1px solid #dbe4dd;padding:10px 15px" href="#choix-statistiques" data-manage-matomo>Gérer les statistiques</a></p></main>
+  <script>
+  document.addEventListener('DOMContentLoaded',function(){
+    try{
+      var submitted=window.sessionStorage.getItem('capdegre_contact_submitted')==='1';
+      window.sessionStorage.removeItem('capdegre_contact_submitted');
+      if(submitted&&window.localStorage.getItem('capdegre_matomo_choice_v1')==='yes'){
+        window._paq=window._paq||[];
+        window._paq.push(['trackEvent','Contact','Formulaire transmis']);
+      }
+    }catch(e){}
+  });
+  </script>
   <script defer src="/matomo-consent.js"></script>
 </body>
 </html>

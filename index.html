@@ -554,9 +554,9 @@
       <div class="wrap contact-grid">
         <div>
           <div class="eyebrow">Premier contact</div>
-          <h2>CAP DEGRÉ° prend forme. Parlons de votre projet.</h2>
-          <p>Vous hésitez entre plusieurs solutions ? Deux ou trois phrases suffisent pour un premier échange. Vous n’avez pas besoin de disposer de devis ou d’un dossier technique complet.</p>
-          <p><strong>Pour nous aider à comprendre :</strong> précisez si possible la commune, le type de logement, le chauffage actuel, les solutions envisagées et le budget approximatif. Si vous disposez de devis ou d’un DPE, inutile de transmettre des documents personnels dès ce premier message : nous pourrons déterminer ensuite les informations réellement nécessaires.</p>
+          <h2>Une décision de travaux à prendre ? Parlons-en.</h2>
+          <p>Vous hésitez entre plusieurs devis, un changement de chauffage ou l'ordre des travaux ? Décrivez la décision que vous devez prendre. Ce premier échange sert à comprendre votre besoin et à tester notre futur service indépendant, sans engagement.</p>
+          <p><strong>Pour nous aider à comprendre :</strong> précisez si possible le type de logement, le chauffage actuel, les solutions envisagées, votre échéance et le budget approximatif. Si vous disposez de devis ou d’un DPE, inutile de transmettre des documents personnels dès ce premier message : nous pourrons déterminer ensuite les informations réellement nécessaires.</p>
           <p>CAP DEGRÉ° est actuellement en phase de test du marché. Ce premier échange permet de comprendre vos besoins et d'orienter les futurs services ; il ne constitue pas une offre de prestation commerciale.</p>
           <p>Pour voir comment une comparaison pourrait être restituée : <a href="/comment-ca-marche.html" style="text-decoration:underline;font-weight:800;color:#365f4b">consulter la méthode et les exemples de rapports →</a></p>
           <div class="contact-box">
@@ -582,13 +582,16 @@
           <select id="kind" name="kind">
             <option value="">Sélectionner un type de projet</option>
             <option>Conseil avant achat immobilier</option>
-            <option>Rénovation / chauffage</option>
+            <option>Choisir un système de chauffage</option><option>Comparer des devis avant signature</option><option>Choisir l’ordre des travaux de rénovation</option>
             <option>Construction neuve / projet global</option>
             <option>Autre demande</option>
           </select>
 
-          <label for="place">Commune du projet (facultatif)</label>
-          <input id="place" name="place" maxlength="100">
+          <label for="deadline">Quand souhaitez-vous décider ? (facultatif)</label>
+          <select id="deadline" name="deadline"><option value="">Sélectionner une échéance</option><option value="moins-1-mois">Dans moins d’un mois</option><option value="1-a-3-mois">Dans 1 à 3 mois</option><option value="plus-3-mois">Dans plus de 3 mois</option><option value="exploration">Je me renseigne seulement</option></select>
+
+          <label for="decision">Quelle décision vous pose le plus de difficultés ? (facultatif)</label>
+          <input id="decision" name="decision" maxlength="180" placeholder="Exemple : conserver le gaz ou installer une PAC ?">
 
           <label for="message">Votre question ou votre besoin *</label>
           <textarea id="message" name="message" required minlength="10" maxlength="3000" placeholder="Exemple : Ma chaudière gaz a 20 ans. J’hésite à installer une PAC, mais je ne sais pas si mes radiateurs conviennent…"></textarea>
@@ -628,8 +631,8 @@
     try{
       var p=new URLSearchParams(window.location.search);
       var choice={
-        chauffage:"Rénovation / chauffage",
-        renovation:"Rénovation / chauffage",
+        chauffage:"Choisir un système de chauffage",
+        renovation:"Choisir l’ordre des travaux de rénovation",
         achat:"Conseil avant achat immobilier",
         global:"Construction neuve / projet global"
       }[p.get("sujet")];
